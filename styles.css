@@ -70,7 +70,11 @@ section{padding:56px 0}
 .hero h1 em{font-style:normal;color:var(--teal);position:relative;white-space:nowrap}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.12em;background:var(--lime);border-radius:3px;transform:scaleX(0);transform-origin:left;animation:sweep .6s var(--ease) .5s both}
 @keyframes sweep{to{transform:scaleX(1)}}
-.hero .lede{font-size:1.12rem;color:var(--ink-soft);margin:18px 0 28px;max-width:34em}
+.hero .lede{font-size:1.12rem;color:var(--ink-soft);margin:18px 0 22px;max-width:34em}
+.spec{display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--forest);background:rgba(140,199,67,.16);border:1px solid rgba(140,199,67,.4);padding:8px 16px;border-radius:999px}
+.specialty-band{background:linear-gradient(135deg,var(--forest),#15351f);color:#fff;border-radius:var(--radius);padding:24px 26px;margin-bottom:32px;box-shadow:var(--shadow-sm)}
+.specialty-band strong{font-family:'Montserrat',sans-serif;font-size:1.12rem;display:block;margin-bottom:4px}
+.specialty-band span{color:#d7e8d9}
 .hero-cta{display:flex;flex-direction:column;gap:12px}
 .hero-cta .btn{width:100%}
 .hero-photo{margin-top:34px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);position:relative;aspect-ratio:4/5}
@@ -129,6 +133,19 @@ section{padding:56px 0}
 .svc-row p{color:var(--ink-soft)}
 .svc-row ul{margin:14px 0 0;padding-left:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .svc-row ul li{background:var(--paper-2);border:1px solid var(--line);color:var(--forest);font-size:.84rem;font-weight:600;padding:6px 13px;border-radius:999px}
+
+/* ===== Reviews / testimonials ===== */
+.rating-head{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:34px}
+.rating-head .stars{color:var(--lime);font-size:1.5rem;letter-spacing:4px;line-height:1}
+.rating-head .rnum{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--navy);font-size:1.1rem}
+.rating-head .rnum span{color:var(--ink-soft);font-weight:500}
+.tgrid{display:grid;grid-template-columns:1fr;gap:18px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.tcard .stars{color:var(--lime);letter-spacing:2px;font-size:1rem;margin-bottom:12px}
+.tcard blockquote{margin:0 0 16px;color:var(--navy);font-size:1.02rem;line-height:1.55;font-style:italic}
+.tcard .who{margin-top:auto;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--forest);font-size:.92rem}
+.tcard .who span{display:block;color:var(--ink-soft);font-weight:500;font-size:.82rem;font-family:'Barlow',sans-serif}
+.reviews-more{text-align:center;margin-top:28px}
 
 /* ===== Reviews band ===== */
 .reviews-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy),#0a1426);color:#fff;border-radius:24px;text-align:center;padding:48px 26px;box-shadow:var(--shadow)}
@@ -224,6 +241,7 @@ footer a:hover{color:#fff}
   .trust small{font-size:.8rem}
   .svc{grid-template-columns:repeat(4,1fr)}
   .feats{grid-template-columns:repeat(3,1fr);gap:22px}
+  .tgrid{grid-template-columns:repeat(2,1fr)}
   .problem-grid{flex-direction:row;align-items:center;gap:46px}
   .problem-grid > .ptext{flex:1.25}
   .problem-grid > .pain{flex:1}
@@ -253,6 +271,7 @@ footer a:hover{color:#fff}
   .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:84px 0 78px}
   .hero-photo{margin-top:0;aspect-ratio:4/5}
   .hero-content{order:-1}
+  .tgrid{grid-template-columns:repeat(3,1fr)}
   .section-head h2{font-size:2.6rem}
   .guide{flex-direction:row;align-items:center;gap:54px}
   .guide-photo{max-width:none;flex:0 0 42%}
