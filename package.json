@@ -1,0 +1,14 @@
+{
+  "name": "T&M Travel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "T&M Travel is a Central Oregon travel advisor in Bend, Oregon. We take care of the planning so you can relax before you even leave for vacation. Cruises, family trips, luxury, and international travel, planned for you since 1992.",
+  "type": "module",
+  "scripts": {
+    "serve": "node serve.mjs",
+    "screenshot": "node screenshot.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^24.40.0"
+  }
+}

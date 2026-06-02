@@ -1,0 +1,42 @@
+{
+  "_comment": "T&M Travel — Marilyn Hamper, Central Oregon travel advisor (Bend, OR). Faithful rebuild of the WordPress site (recovered copy + photos). Caleb's grandmother + former Hoffmedia branding client (2021).",
+  "siteName": "T&M Travel",
+  "siteNameLegal": "T&M Travel",
+  "slug": "tandm-travel",
+  "domain": "tandmtravel.com",
+  "tagline": "Central Oregon Travel Advisor",
+  "description": "T&M Travel is a Central Oregon travel advisor in Bend, Oregon. We take care of the planning so you can relax before you even leave for vacation. Cruises, family trips, luxury, and international travel, planned for you since 1992.",
+  "phoneDisplay": "(541) 317-0656",
+  "phoneTel": "+15413170656",
+  "phoneSchema": "+1-541-317-0656",
+  "email": "marilyn@tandmtravel.com",
+  "hours": "Mon–Fri by appointment · Closes 4pm",
+  "logoUrl": "brand_assets/logo-navy.png",
+  "web3formsKey": "PLACEHOLDER-REPLACE-BEFORE-LAUNCH",
+  "colors": {
+    "_note": "Lime is her PRIMARY brand color. Navy is ink/text. Forest + teal are secondary accents. Light/paper theme (not dark).",
+    "primary": "#8CC743",
+    "primaryDark": "#235333",
+    "primaryRgb": "140,199,67",
+    "accentTeal": "#00B09B",
+    "bg": "#FBFAF8",
+    "bgRgb": "251,250,248",
+    "surface": "#FFFFFF",
+    "surface2": "#F3F0E9",
+    "text": "#0C1B33"
+  },
+  "fonts": {
+    "_note": "Her real brand fonts from the T&M brand guidelines. Display = Montserrat (headings), Body = Barlow.",
+    "display": "Montserrat",
+    "displayUrl": "Montserrat:wght@500;600;700;800",
+    "body": "Barlow",
+    "bodyUrl": "Barlow:ital,wght@0,400;0,500;0,600;1,400"
+  },
+  "github": {
+    "owner": "caleb906",
+    "private": false
+  },
+  "vercel": {
+    "scope": "caleb-hoffmanns-projects"
+  }
+}

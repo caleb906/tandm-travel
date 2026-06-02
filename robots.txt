@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /privacy
+
+Sitemap: https://tandmtravel.com/sitemap.xml
