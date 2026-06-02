@@ -210,6 +210,7 @@ form.tm-form{background:#fff;border:1px solid var(--line);border-radius:var(--ra
 .tm-form .row2{display:flex;flex-direction:column;gap:0}
 .tm-form .btn{width:100%;margin-top:20px}
 .tm-form .fineprint{font-size:.82rem;color:var(--ink-soft);margin-top:12px;text-align:center}
+.tm-form .h-captcha{margin-top:18px}
 
 /* ===== Thank-you ===== */
 .ty{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 0}

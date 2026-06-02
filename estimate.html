@@ -40,13 +40,12 @@
 
 <section>
   <div class="wrap" style="max-width:680px">
-    <!-- FormSubmit. Sends to marilyn@tandmtravel.com (recipient in the action). First submit triggers a one-time activation email to her inbox. -->
-    <form class="tm-form" method="POST" action="https://formsubmit.co/marilyn@tandmtravel.com">
-      <input type="hidden" name="_subject" value="New T&M Travel vacation request" />
-      <input type="hidden" name="_next" value="https://tandmtravel.com/thank-you" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+    <!-- Web3Forms. Recipient + CC are set in the Web3Forms dashboard for this key. -->
+    <form class="tm-form" method="post" action="https://api.web3forms.com/submit">
+      <input type="hidden" name="access_key" value="6210f437-6876-4671-946c-fda6374efaab" />
+      <input type="hidden" name="redirect" value="https://tandmtravel.com/thank-you" />
+      <input type="hidden" name="subject" value="New T&M Travel vacation request" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
       <label for="name">Name</label>
       <input id="name" name="name" type="text" placeholder="First and last" required />
@@ -81,6 +80,8 @@
 
       <label for="message">Travel dates &amp; description</label>
       <textarea id="message" name="message" rows="5" placeholder="When would you like to travel, and where? Tell me a little about the trip you have in mind." required></textarea>
+
+      <div class="h-captcha" data-captcha="true"></div>
 
       <button class="btn btn-primary" type="submit">Send my trip details</button>
       <p class="fineprint">No spam, ever. Just a real reply from Marilyn.</p>
@@ -117,5 +118,6 @@
 </footer>
 
 <script src="/nav.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
