@@ -61,12 +61,13 @@
           <li><span class="ico"><img src="/brand_assets/icons/019-schedule.svg" alt="" /></span><span>By phone, email, and video. Evenings and weekends by appointment.</span></li>
         </ul>
       </div>
-      <!-- Web3Forms. access_key + redirect must be real before production launch. -->
-      <form class="tm-form" method="post" action="https://api.web3forms.com/submit">
-        <input type="hidden" name="access_key" value="6210f437-6876-4671-946c-fda6374efaab" />
-        <input type="hidden" name="redirect" value="https://tandmtravel.com/thank-you" />
-        <input type="hidden" name="subject" value="New T&M Travel inquiry" />
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <!-- FormSubmit. Sends to marilyn@tandmtravel.com (recipient in the action). First submit triggers a one-time activation email to her inbox. -->
+      <form class="tm-form" method="POST" action="https://formsubmit.co/marilyn@tandmtravel.com">
+        <input type="hidden" name="_subject" value="New T&M Travel inquiry" />
+        <input type="hidden" name="_next" value="https://tandmtravel.com/thank-you" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="First and last" required />
