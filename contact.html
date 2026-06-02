@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Analytics (centralized — see /analytics.js) -->
+  <script src="/analytics.js"></script>
+  <title>Contact T&amp;M Travel | Bend, Oregon Travel Advisor</title>
+  <meta name="description" content="Get in touch with Marilyn at T&amp;M Travel. Call (541) 317-0656 or send a message to start planning your next vacation. Based in Bend, Oregon." />
+  <link rel="canonical" href="https://tandmtravel.com/contact" />
+  <link rel="icon" href="/brand_assets/photos/round-logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="T&amp;M Travel home"><img src="/brand_assets/logo-navy.png" alt="T&amp;M Travel" /></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/services">Vacations</a>
+      <a href="/#how">How it works</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/estimate">Plan your vacation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center">Get in touch</span>
+    <h1>Let's start planning.</h1>
+    <p>Reach out however is easiest. I read every message myself.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="form-grid">
+      <div>
+        <ul class="contact-list">
+          <li><span class="ico">📞</span><a href="tel:+15413170656">(541) 317-0656</a></li>
+          <li><span class="ico">✉️</span><a href="mailto:marilyn@tandmtravel.com">marilyn@tandmtravel.com</a></li>
+          <li><span class="ico">📍</span><span>Based in Bend, Oregon. Serving travelers everywhere.</span></li>
+          <li><span class="ico">🕑</span><span>By phone, email, and video. Evenings and weekends by appointment.</span></li>
+        </ul>
+      </div>
+      <!-- Web3Forms. access_key + redirect must be real before production launch. -->
+      <form class="tm-form" method="post" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="PLACEHOLDER-REPLACE-BEFORE-LAUNCH" />
+        <input type="hidden" name="redirect" value="https://tandmtravel.com/thank-you" />
+        <input type="hidden" name="subject" value="New T&M Travel inquiry" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="First and last" required />
+        <div class="row2">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(541) 555-0000" />
+          </div>
+        </div>
+        <label for="message">Where do you want to go?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell me about the trip you have in mind, your dates, and roughly how many travelers."></textarea>
+        <button class="btn btn-primary" type="submit">Send it over</button>
+        <p class="fineprint">No spam, ever. Just a real reply from Marilyn.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div style="max-width:280px">
+        <a class="brand" href="/"><img src="/brand_assets/logo-white.png" alt="T&amp;M Travel" /></a>
+        <p style="color:#8fa1b3;font-size:.92rem">Central Oregon travel advisor. Planning travel so you can relax, before you even leave for vacation.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/services">Vacations</a>
+        <a href="/#how">How it works</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/estimate">Plan your vacation</a>
+      </nav>
+      <div class="foot-contact">
+        <a href="tel:+15413170656">(541) 317-0656</a>
+        <a href="mailto:marilyn@tandmtravel.com">marilyn@tandmtravel.com</a>
+        <span style="display:block;margin-top:4px;color:#8fa1b3">Bend, Oregon</span>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="yr"></span> T&amp;M Travel · Marilyn Hamper. Site by Hoffmedia.</span>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/nav.js"></script>
+</body>
+</html>

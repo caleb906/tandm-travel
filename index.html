@@ -1,121 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T&M Travel — Coming Soon</title>
-  <meta name="description" content="T&M Travel is a Central Oregon travel advisor in Bend, Oregon. We take care of the planning so you can relax before you even leave for vacation. Cruises, family trips, luxury, and international travel, planned for you since 1992.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --primary:#8CC743;
-      --bg:#FBFAF8;
-      --surface:#FFFFFF;
-      --text:#0C1B33;
-      --text-dim:rgba(255,255,255,0.55);
-      --display:'Montserrat',sans-serif;
-      --body:'Barlow',sans-serif;
-    }
-    body{
-      font-family:var(--body);
-      background:var(--bg);
-      color:var(--text);
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      padding:24px;
-      overflow:hidden;
-      position:relative;
-    }
-    body::before{
-      content:'';
-      position:fixed;
-      inset:-20%;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(140,199,67,0.18), transparent 45%),
-        radial-gradient(circle at 80% 70%, rgba(140,199,67,0.10), transparent 50%);
-      filter:blur(40px);
-      pointer-events:none;
-    }
-    body::after{
-      content:'';
-      position:fixed;
-      inset:0;
-      opacity:0.04;
-      pointer-events:none;
-      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-    .card{
-      position:relative;
-      z-index:1;
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:24px;
-      padding:56px 48px;
-      max-width:560px;
-      width:100%;
-      text-align:center;
-      backdrop-filter:blur(20px);
-    }
-    .pill{
-      display:inline-block;
-      font-size:11px;
-      font-weight:600;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
-      color:var(--primary);
-      background:rgba(140,199,67,0.12);
-      border:1px solid rgba(140,199,67,0.25);
-      padding:6px 14px;
-      border-radius:100px;
-      margin-bottom:24px;
-    }
-    h1{
-      font-family:var(--display);
-      font-size:clamp(40px,6vw,64px);
-      letter-spacing:0.02em;
-      line-height:1;
-      margin-bottom:16px;
-    }
-    p{
-      font-size:16px;
-      color:var(--text-dim);
-      line-height:1.7;
-      max-width:420px;
-      margin:0 auto 32px;
-    }
-    .contact{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      padding-top:24px;
-      border-top:1px solid rgba(255,255,255,0.08);
-    }
-    .contact a{
-      color:var(--text-dim);
-      text-decoration:none;
-      font-size:14px;
-      font-weight:500;
-      transition:color 0.15s ease;
-    }
-    .contact a:hover{color:var(--primary)}
-    .divider{color:rgba(255,255,255,0.15)}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Analytics (centralized — see /analytics.js) -->
+  <script src="/analytics.js"></script>
+  <title>T&amp;M Travel | Central Oregon Travel Advisor in Bend, Oregon</title>
+  <meta name="description" content="T&amp;M Travel is a Central Oregon travel advisor in Bend, Oregon. We take care of the planning so you can relax before you even leave for vacation. Cruises, family, luxury, and international trips since 1992." />
+  <link rel="canonical" href="https://tandmtravel.com/" />
+  <link rel="icon" href="/brand_assets/photos/round-logo.webp" />
+
+  <meta property="og:title" content="T&amp;M Travel | Central Oregon Travel Advisor" />
+  <meta property="og:description" content="We take care of the planning so you can relax before you even leave for vacation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tandmtravel.com/" />
+  <meta property="og:image" content="https://tandmtravel.com/brand_assets/photos/woman-vacation.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "T&M Travel",
+    "description": "Central Oregon travel advisor. Cruises, family, luxury, and international travel planning since 1992.",
+    "url": "https://tandmtravel.com/",
+    "telephone": "+1-541-317-0656",
+    "email": "marilyn@tandmtravel.com",
+    "image": "https://tandmtravel.com/brand_assets/photos/woman-vacation.jpg",
+    "areaServed": "Central Oregon and travelers nationwide",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bend", "addressRegion": "OR", "addressCountry": "US" },
+    "founder": { "@type": "Person", "name": "Marilyn Hamper" },
+    "foundingDate": "1992",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "7" }
+  }
+  </script>
 </head>
 <body>
-  <div class="card">
-    <div class="pill">Launching Soon</div>
-    <h1>T&M Travel</h1>
-    <p>Central Oregon Travel Advisor — new site in progress. In the meantime, reach out anytime.</p>
-    <div class="contact">
-      <a href="tel:+15413170656">(541) 317-0656</a>
-      <span class="divider">·</span>
-      <a href="mailto:marilyn@tandmtravel.com">marilyn@tandmtravel.com</a>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="T&amp;M Travel home"><img src="/brand_assets/logo-navy.png" alt="T&amp;M Travel" /></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/services">Vacations</a>
+      <a href="/#how">How it works</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/estimate">Plan your vacation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO (Character + CTA) ===================== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">Central Oregon Travel Advisor</span>
+      <h1>Stop stressing about your vacation. <em>Start enjoying it.</em></h1>
+      <p class="lede">We take care of the planning so you can relax before you even leave for vacation. Personal travel planning out of Bend, Oregon since 1992.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/estimate">Plan your vacation</a>
+        <a class="btn btn-ghost" href="/services">See where we go</a>
+      </div>
+      <div class="trust">
+        <div><span class="stat-num">Since 1992</span><small>Serving Central Oregon</small></div>
+        <div><span class="stat-num">30+ yrs</span><small>Trusted experience</small></div>
+        <div><span class="stat-num">5.0 &#9733;</span><small>Google reviews</small></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/brand_assets/photos/woman-vacation.jpg" alt="A traveler relaxing on vacation" />
+      <span class="tag">Your travel, your way</span>
     </div>
   </div>
+</section>
+
+<!-- ===================== PROBLEM ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Planning travel on your own is overwhelming</span>
+      <h2>Save time and take back control of your vacation.</h2>
+    </div>
+    <p class="problem-body">Planning a vacation by yourself takes a lot of work. There are so many details to get right, and so little time. You are meant to enjoy a vacation, not dread it. T&amp;M Travel takes the planning off your plate so the only thing left to do is go.</p>
+  </div>
+</section>
+
+<!-- ===================== GUIDE (Meet Marilyn) ===================== -->
+<section class="alt">
+  <div class="wrap guide">
+    <div class="guide-photo"><img src="/brand_assets/photos/marilyn.jpg" alt="Marilyn Hamper, founder of T&amp;M Travel" /></div>
+    <div class="guide-text">
+      <span class="eyebrow">Meet your guide</span>
+      <h2 style="font-size:clamp(1.7rem,6vw,2.3rem);font-weight:800;letter-spacing:-.015em;line-height:1.15">Hi, I'm Marilyn.</h2>
+      <p>I started T&amp;M Travel in Bend, Oregon in 1992 with a passion for top-notch customer service for experienced and novice travelers alike. After more than 30 years and hundreds of happy travelers, that hasn't changed.</p>
+      <p class="quote">We don't just care about travel. We care about you.</p>
+      <a class="btn btn-ghost" href="/about">More about T&amp;M Travel</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLAN (3 steps) ===================== -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Here's how it works</span>
+      <h2>Three easy steps to a vacation that's fully handled.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3>Contact T&amp;M Travel</h3><p>Tell me where you want to go, your dates, and your budget. Not sure yet? That's what I'm here for.</p></div>
+      <div class="step"><div class="step-n">2</div><h3>Get a personalized plan</h3><p>I build a plan around you, handle the details, and take care of the bookings so you don't have to.</p></div>
+      <div class="step"><div class="step-n">3</div><h3>Enjoy your vacation</h3><p>You travel with a clear plan and someone in your corner the whole way. Relax, it's covered.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES PREVIEW ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Your travel, your way</span>
+      <h2>Where will T&amp;M Travel take you?</h2>
+    </div>
+    <div class="svc">
+      <a class="svc-card" href="/services"><img src="/brand_assets/photos/family.jpg" alt="Family vacations" /><h3>Family Vacations</h3></a>
+      <a class="svc-card" href="/services"><img src="/brand_assets/photos/sightseeing.jpg" alt="Cruise vacations" /><h3>Cruise Vacations</h3></a>
+      <a class="svc-card" href="/services"><img src="/brand_assets/photos/hero-bg.jpg" alt="Luxury vacations" /><h3>Luxury Vacations</h3></a>
+      <a class="svc-card" href="/services"><img src="/brand_assets/photos/tourists.jpg" alt="International vacations" /><h3>International Vacations</h3></a>
+    </div>
+    <div class="svc-more"><a class="btn btn-ghost" href="/services">See all the ways we travel</a></div>
+  </div>
+</section>
+
+<!-- ===================== SUCCESS / VISION ===================== -->
+<section>
+  <div class="wrap">
+    <div class="vision">
+      <img src="/brand_assets/photos/couple.jpg" alt="Travelers enjoying their trip" />
+      <span class="eyebrow" style="color:var(--lime)">The good part</span>
+      <h2>Picture the trip where nothing went wrong.</h2>
+      <p>That's the goal. You make the memories, T&amp;M Travel sweats the details. Based in Central Oregon, planning trips for travelers everywhere by phone, email, and video.</p>
+      <div class="tags"><span>Bend &amp; Central Oregon</span><span>Cruises</span><span>All-Inclusive</span><span>Family</span><span>Luxury</span><span>International</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ (objections) ===================== -->
+<!-- VERIFY with Marilyn: confirm the cost/fee answer matches how she actually works before launch. -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Common questions</span>
+      <h2>Good to know before we start.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>What kinds of trips do you plan?</summary><p>Cruises, family vacations, luxury escapes, international travel, and just about anything in between. If it's a trip, I can help you plan it.</p></details>
+      <details><summary>I don't live in Bend. Can you still help me?</summary><p>Absolutely. I'm based in Central Oregon but plan travel for people anywhere. We work together by phone, email, and video, whatever is easiest for you.</p></details>
+      <details><summary>What does it cost to work with T&amp;M Travel?</summary><p>For many trips, my planning support comes at little or no added cost to you because I'm supported by the travel partners I book with. For more complex custom itineraries, I'll always be upfront about any planning fee before we begin.</p></details>
+      <details><summary>How far ahead should I reach out?</summary><p>The earlier the better for the best availability and pricing, but don't let timing stop you. I'm happy to help with last-minute trips too.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA (Failure → act) ===================== -->
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>You shouldn't be stressed about your vacation. It's time to enjoy it.</h2>
+      <p>Tell me a little about the trip you have in mind and I'll be in touch with the next steps. There's no cost to start the conversation.</p>
+      <a class="btn btn-primary" href="/estimate">Plan your vacation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div style="max-width:280px">
+        <a class="brand" href="/"><img src="/brand_assets/logo-white.png" alt="T&amp;M Travel" /></a>
+        <p style="color:#8fa1b3;font-size:.92rem">Central Oregon travel advisor. Planning travel so you can relax, before you even leave for vacation.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/services">Vacations</a>
+        <a href="/#how">How it works</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/estimate">Plan your vacation</a>
+      </nav>
+      <div class="foot-contact">
+        <a href="tel:+15413170656">(541) 317-0656</a>
+        <a href="mailto:marilyn@tandmtravel.com">marilyn@tandmtravel.com</a>
+        <span style="display:block;margin-top:4px;color:#8fa1b3">Bend, Oregon</span>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="yr"></span> T&amp;M Travel · Marilyn Hamper. Site by Hoffmedia.</span>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/nav.js"></script>
 </body>
 </html>
