@@ -108,6 +108,13 @@ section{padding:56px 0}
 .svc-card h3{position:absolute;left:15px;right:12px;bottom:14px;z-index:2;color:#fff;font-size:1.04rem;font-weight:700;line-height:1.2}
 .svc-more{text-align:center;margin-top:26px}
 
+/* ===== Feature row (custom travel icons) ===== */
+.feats{display:grid;grid-template-columns:1fr;gap:16px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-sm);text-align:center}
+.feat .ic{width:64px;height:64px;margin:0 auto 14px;display:block}
+.feat h3{font-size:1.18rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+.feat p{color:var(--ink-soft);font-size:.99rem}
+
 /* ===== Detailed service blocks (services.html) ===== */
 .svc-rows{display:flex;flex-direction:column;gap:26px}
 .svc-row{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
@@ -148,8 +155,8 @@ details p{color:var(--ink-soft);padding:0 0 18px;font-size:1rem}
 .form-grid{display:flex;flex-direction:column;gap:34px}
 .contact-list{list-style:none}
 .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line)}
-.contact-list .ico{width:24px;flex:none;color:var(--teal);display:inline-flex;align-items:center;justify-content:center;margin-top:2px}
-.contact-list .ico svg{width:22px;height:22px}
+.contact-list .ico{width:34px;flex:none;display:inline-flex;align-items:center;justify-content:center}
+.contact-list .ico img{width:32px;height:32px}
 .contact-list a,.contact-list span{color:var(--ink-soft);text-decoration:none;font-size:1.03rem}
 .contact-list a:hover{color:var(--teal)}
 form.tm-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
@@ -203,6 +210,7 @@ footer a:hover{color:#fff}
   .trust .stat-num{font-size:1.7rem}
   .trust small{font-size:.8rem}
   .svc{grid-template-columns:repeat(4,1fr)}
+  .feats{grid-template-columns:repeat(3,1fr);gap:22px}
   .steps{flex-direction:row}
   .step{flex:1}
   section{padding:72px 0}
