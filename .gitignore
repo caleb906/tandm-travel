@@ -8,7 +8,8 @@ temporary screenshots/
 .env.local
 screencapture-*
 Brand Assets/
-brand_assets/*
-!brand_assets/README.md
+brand_assets/*.ai
+brand_assets/*.psd
+brand_assets/*.pdf
 
 .vercel
