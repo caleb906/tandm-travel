@@ -119,7 +119,7 @@ section{padding:56px 0}
 /* ===== Feature row (custom travel icons) ===== */
 .feats{display:grid;grid-template-columns:1fr;gap:16px}
 .feat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-sm);text-align:center}
-.feat .ic{width:64px;height:64px;margin:0 auto 14px;display:block}
+.feat .ic{width:66px;height:66px;padding:13px;margin:0 auto 16px;display:block;background:rgba(140,199,67,.15);border:1px solid rgba(140,199,67,.3);border-radius:18px}
 .feat h3{font-size:1.18rem;font-weight:800;color:var(--navy);margin-bottom:6px}
 .feat p{color:var(--ink-soft);font-size:.99rem}
 
@@ -133,6 +133,16 @@ section{padding:56px 0}
 .svc-row p{color:var(--ink-soft)}
 .svc-row ul{margin:14px 0 0;padding-left:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .svc-row ul li{background:var(--paper-2);border:1px solid var(--line);color:var(--forest);font-size:.84rem;font-weight:600;padding:6px 13px;border-radius:999px}
+
+/* ===== Dark section (visual variety) ===== */
+.section-dark{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--navy),#0a1426);color:#fff}
+.section-dark::after{content:"";position:absolute;inset:0;background:radial-gradient(560px 240px at 88% -5%,rgba(0,176,155,.26),transparent 60%),radial-gradient(480px 240px at 8% 108%,rgba(140,199,67,.20),transparent 60%);pointer-events:none}
+.section-dark .wrap{position:relative;z-index:1}
+.section-dark .section-head h2{color:#fff}
+.section-dark .rnum{color:#fff}
+.section-dark .rnum span{color:#c9d4e0}
+.section-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.section-dark .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
 
 /* ===== Reviews / testimonials ===== */
 .rating-head{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:34px}
@@ -251,7 +261,6 @@ footer a:hover{color:#fff}
   .vision{padding:64px 44px}
   .cta-band{padding:60px 30px}
   .foot-cols{flex-direction:row;justify-content:space-between;align-items:flex-start}
-  footer nav{flex-direction:row;gap:22px;flex-wrap:wrap}
   .form-grid{flex-direction:row;align-items:flex-start}
   .form-grid > *{flex:1}
   .svc-row{flex-direction:row;align-items:stretch}
