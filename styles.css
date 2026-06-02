@@ -20,9 +20,7 @@ a{color:inherit}
 img{max-width:100%;display:block}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
 
-.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:700;color:var(--forest);margin-bottom:14px;display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:24px;height:3px;border-radius:2px;background:var(--lime)}
-.center .eyebrow{justify-content:center}
+.eyebrow{display:inline-flex;align-items:center;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:700;color:var(--forest);background:rgba(140,199,67,.16);border:1px solid rgba(140,199,67,.40);padding:7px 14px;border-radius:999px;margin-bottom:16px}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:1rem;letter-spacing:.01em;padding:15px 26px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease), color .2s var(--ease);min-height:52px}
 .btn-primary{background:var(--lime);color:var(--navy);box-shadow:0 14px 30px -12px rgba(140,199,67,.85)}
@@ -150,7 +148,8 @@ details p{color:var(--ink-soft);padding:0 0 18px;font-size:1rem}
 .form-grid{display:flex;flex-direction:column;gap:34px}
 .contact-list{list-style:none}
 .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line)}
-.contact-list .ico{font-size:1.3rem;width:28px;flex:none}
+.contact-list .ico{width:24px;flex:none;color:var(--teal);display:inline-flex;align-items:center;justify-content:center;margin-top:2px}
+.contact-list .ico svg{width:22px;height:22px}
 .contact-list a,.contact-list span{color:var(--ink-soft);text-decoration:none;font-size:1.03rem}
 .contact-list a:hover{color:var(--teal)}
 form.tm-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
@@ -164,7 +163,8 @@ form.tm-form{background:#fff;border:1px solid var(--line);border-radius:var(--ra
 
 /* ===== Thank-you ===== */
 .ty{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 0}
-.ty .badge{width:74px;height:74px;border-radius:50%;background:var(--lime);color:var(--navy);display:grid;place-items:center;font-size:2.2rem;margin:0 auto 22px;box-shadow:0 14px 30px -10px rgba(140,199,67,.8)}
+.ty .badge{width:74px;height:74px;border-radius:50%;background:var(--lime);color:var(--navy);display:grid;place-items:center;margin:0 auto 22px;box-shadow:0 14px 30px -10px rgba(140,199,67,.8)}
+.ty .badge svg{width:36px;height:36px}
 .ty h1{font-size:clamp(1.9rem,7vw,2.6rem);font-weight:800;letter-spacing:-.02em}
 .ty p{color:var(--ink-soft);font-size:1.12rem;margin:16px auto 28px;max-width:32em}
 
