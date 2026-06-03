@@ -142,8 +142,9 @@ section{padding:56px 0}
 .section-dark::after{content:"";position:absolute;inset:0;background:radial-gradient(560px 240px at 88% -5%,rgba(0,176,155,.26),transparent 60%),radial-gradient(480px 240px at 8% 108%,rgba(140,199,67,.20),transparent 60%);pointer-events:none}
 .section-dark .wrap{position:relative;z-index:1}
 .section-dark .section-head h2{color:#fff}
-.section-dark .rnum{color:#fff}
-.section-dark .rnum span{color:#c9d4e0}
+.section-dark .eyebrow{color:#e2f1c8;background:rgba(140,199,67,.18);border-color:rgba(140,199,67,.55)}
+.section-dark .rating-head .rnum{color:#fff}
+.section-dark .rating-head .rnum span{color:#c9d4e0}
 .section-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
 .section-dark .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
 
