@@ -10,8 +10,9 @@ A rebuild of **Marilyn Hamper's T&M Travel** site (Central Oregon travel advisor
 
 | | |
 |---|---|
-| **Live (Vercel)** | https://tandm-travel.vercel.app |
-| **Real domain** | tandmtravel.com **(DNS not pointed yet — see step 1 below)** |
+| **Live (production)** | **tandmtravel.com** — LIVE (DNS repointed 2026-06-03). Production deploys from `main`. |
+| **Staging** | https://tandm-travel-git-staging-caleb-hoffmanns-projects.vercel.app — deploys from the `staging` branch (Vercel preview, never touches prod) |
+| **Vercel preview** | https://tandm-travel.vercel.app |
 | **GitHub** | `caleb906/tandm-travel` |
 | **Vercel project** | `tandm-travel` (team scope `caleb-hoffmanns-projects`) |
 | **Local folder** | `C:\Users\Caleb\Documents\Hoffmedia Sites\T&M Travel` |
@@ -19,19 +20,23 @@ A rebuild of **Marilyn Hamper's T&M Travel** site (Central Oregon travel advisor
 
 ---
 
-## ⚠️ Two manual steps left to go fully live
+## ⚠️ Deploy rule (site is LIVE)
 
-Everything on the site is built and deployed. These two are dashboard/DNS actions (can't be done from the code):
+`tandmtravel.com` is live. **Never push `main` / deploy to prod without Caleb's explicit clearance.** Work on the **`staging`** branch:
 
-### 1. Point the domain (SiteGround → Vercel)
-Both `tandmtravel.com` and `www` are already added to the Vercel project. In **SiteGround → Site Tools → Domain → DNS Zone Editor**, change **only the A records** (leave nameservers + MX alone so email survives):
+```bash
+git checkout staging
+# ...edits...
+git add -A && git commit -m "..." && git push origin staging   # preview only, safe
+```
 
-- `A` · host `@` (tandmtravel.com) → `76.76.21.21`
-- `www` → CNAME `cname.vercel-dns.com` (or `A` → `76.76.21.21`)
+Review on the staging URL above. Only on Caleb's go: `git checkout main && git merge staging && git push` (auto-deploys prod), or `vercel deploy --prod --yes --scope caleb-hoffmanns-projects`. Confirmed via Vercel that only `main` serves the production domains; all other branches are preview targets.
 
-Vercel auto-verifies + issues SSL once it propagates (minutes–couple hours). Pointing the A record away from SiteGround is what replaces the old WordPress site (intended).
+> DNS is done (A records repointed off SiteGround 2026-06-03 — `@` + `www` → `76.76.21.21`, NS/MX left intact so email survives).
 
-### 2. Send form leads to Marilyn (Web3Forms)
+## Remaining manual step
+
+### Send form leads to Marilyn (Web3Forms)
 Forms post to **Web3Forms** (key `6210f437-6876-4671-946c-fda6374efaab`) so every submission is logged in the Web3Forms dashboard. To make leads **bypass Caleb and go straight to Marilyn**:
 
 1. Web3Forms → **Linked Emails** → add `marilyn@tandmtravel.com` → click the verify link sent to that inbox.
