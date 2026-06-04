@@ -2,11 +2,11 @@
  * T&M Travel — centralized analytics.
  * Drop <script src="/analytics.js"></script> into the <head> of any page.
  * Change the GA_ID below to update tracking everywhere at once.
- * GA4 is live (G-MXPV5903JP). CLARITY_ID is still blank and no-ops cleanly.
+ * GA4 (G-MXPV5903JP) + Microsoft Clarity (x1l4u96l68) are both live.
  */
 (function () {
   var GA_ID = 'G-MXPV5903JP';   // T&M Travel GA4 (Marilyn's own property)
-  var CLARITY_ID = '';   // TODO: optional — set T&M Travel's own Clarity ID
+  var CLARITY_ID = 'x1l4u96l68';   // T&M Travel Microsoft Clarity
 
   // No analytics configured yet → stub gtag and bail (prevents tracking to the wrong property).
   if (!GA_ID) { window.gtag = function () {}; return; }
