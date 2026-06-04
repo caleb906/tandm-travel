@@ -85,7 +85,7 @@
         <label for="message">How can I help?</label>
         <textarea id="message" name="message" rows="5" placeholder="Tell me a little about the trip you have in mind, and the best way to reach you." required></textarea>
 
-        <div class="h-captcha" data-captcha="true"></div>
+        <input type="hidden" name="recaptcha_response" id="recaptchaResponse" />
 
         <button class="btn btn-primary" type="submit">Send it over</button>
         <p class="fineprint">No spam, ever. Just a real reply from Marilyn.</p>
@@ -124,6 +124,27 @@
 </footer>
 
 <script src="/nav.js"></script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
+<!-- Google reCAPTCHA v3 — paste your Site Key into RECAPTCHA_SITE_KEY (one place). Secret Key goes in the Web3Forms dashboard. -->
+<script>
+  var RECAPTCHA_SITE_KEY = '6LcV3QstAAAAAKfaHXsLqxNRN0WJYEEtKJM4CURZ';
+  (function () {
+    var s = document.createElement('script');
+    s.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY;
+    document.head.appendChild(s);
+    var form = document.querySelector('.tm-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      var field = document.getElementById('recaptchaResponse');
+      if (field.value) return; // token already set — let it submit
+      e.preventDefault();
+      grecaptcha.ready(function () {
+        grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' }).then(function (token) {
+          field.value = token;
+          form.submit();
+        });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
