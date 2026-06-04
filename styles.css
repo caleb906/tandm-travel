@@ -269,7 +269,8 @@ footer a:hover{color:#fff}
   .form-grid{flex-direction:row;align-items:flex-start}
   .form-grid > *{flex:1}
   .svc-row{flex-direction:row;align-items:stretch}
-  .svc-row .ph{flex:0 0 42%;aspect-ratio:auto}
+  .svc-row .ph{flex:0 0 42%;aspect-ratio:auto;min-height:240px}
+  .svc-row .ph img{position:absolute;inset:0}
   .svc-row .tx{flex:1;align-self:center}
   .tm-form .row2{flex-direction:row;gap:14px}
   .tm-form .row2 > div{flex:1}
